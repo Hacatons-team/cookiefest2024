@@ -1,0 +1,200 @@
+.cont {
+	background-color: #1a1a1a;
+}
+.task {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.task-meta {
+	text-align: right;
+}
+
+.task-actions button {
+	margin-left: 5px;
+}
+
+.button-pt {
+	position: relative;
+	background-color: #44444400;
+	border: none;
+	color: #ffffff;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 10px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.button-pt::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ffffff;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+}
+
+.button-pt:hover::after {
+	transform: scaleX(1);
+}
+
+.modal {
+	position: fixed;
+	padding: 5px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(65, 65, 65, 0.849);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	gap: 10px;
+}
+
+.modal-content {
+	background-color: rgb(0, 0, 0);
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	gap: 5px;
+}
+.task {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.task-meta {
+	text-align: right;
+}
+
+.task-actions button {
+	margin-left: 5px;
+}
+
+.button-pt {
+	position: relative;
+	background-color: #44444400;
+	border: none;
+	color: #ffffff;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 10px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.button-pt::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ffffff;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+}
+
+.button-pt:hover::after {
+	transform: scaleX(1);
+}
+
+.modal {
+	position: fixed;
+	padding: 5px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(65, 65, 65, 0.849);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	gap: 10px;
+}
+
+.modal-content {
+	background-color: rgb(0, 0, 0);
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	gap: 5px;
+}
+
+.inp {
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.inp:active {
+	border-color: #ffffff00;
+}
+
+.scrollable-tasks {
+	max-height: 480px; /* Установите максимальную высоту для прокрутки */
+	overflow-y: auto;
+	border: 1px solid #161616; /* Добавьте границу для визуального разделения */
+	padding: 10px; /* Добавьте отступы */
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	width: 100%; /* Ensure the container takes full width */
+}
+
+.task-list {
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	width: 100%; /* Ensure the container takes full width */
+}
+
+.task {
+	max-width: 100%; /* Ensure task items do not exceed container width */
+	box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Для Chrome, Safari и Edge */
+.scroller {
+	overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+.scroller::-webkit-scrollbar {
+	width: 8px; /* Ширина скроллбара */
+}
+
+.scroller::-webkit-scrollbar-track {
+	background: transparent; /* Прозрачный трек */
+}
+
+.scroller::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.5); /* Цвет ползунка */
+	border-radius: 10px; /* Закругленные углы ползунка */
+}
+
+/* Для Firefox */
+.scroller {
+	scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Цвет ползунка и трека */
+	scrollbar-width: thin; /* Тонкий скроллбар */
+}
+
+.search {
+	position: relative;
+	padding: 10px 15px;
+	outline-width: 8px;
+	border-radius: 4px;
+	background-color: #000;
+	color: #fff;
+}
