@@ -1,11 +1,11 @@
 import { Spinner } from '@material-tailwind/react'
 import { useQuery } from '@tanstack/react-query'
 import React, { useState } from 'react'
-import { CgGhostCharacter } from 'react-icons/cg'
 import { Link, useParams } from 'react-router-dom'
 import Task from '../components/Task/Task'
 import { getData } from '../utils/Fething'
 import './Profile.css'
+
 function Profile() {
 	const { Id } = useParams()
 	const { data, error, isLoading } = useQuery({
@@ -15,7 +15,6 @@ function Profile() {
 
 	const [searchQuery, setSearchQuery] = useState('')
 
-	// Рандомный цвет ниже))
 	const getRandomColor = () => {
 		const colors = [
 			'blue',
@@ -31,8 +30,8 @@ function Profile() {
 		return colors[randomIndex]
 	}
 
+	const spinnerColor = getRandomColor()
 	if (isLoading) {
-		const spinnerColor = getRandomColor()
 		return <Spinner className='h-12 w-12' color={spinnerColor} />
 	}
 
@@ -40,7 +39,6 @@ function Profile() {
 		return (
 			<div>
 				Error fetching data: {error.message} <a href='/profile/1'>Profile 1</a>
-				<CgGhostCharacter />
 			</div>
 		)
 	}
